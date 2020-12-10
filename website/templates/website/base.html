@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'website/img/favicon.png' %}" rel="icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'website/bootstrap/4.3.1/css/bootstrap.min.css' %}">
+        <script src="{% static 'website/libs/jquery/3.4.1/jquery.min.js' %}"></script>
+        <script src="{% static 'website/libs/popper.js/1.14.7/umd/popper.min.js' %}"></script>
+        <script src="{% static 'website/bootstrap/4.3.1/js/bootstrap.min.js' %}"></script>
+</head>
+
+<body bgcolor="#FAFAFA">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">BOOKPHONE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item my-2 my-lg-0">
+                    <a class="nav-link my-2 my-lg-0" href="{% url 'register' %}">Register</a>
+                </li>    
+                </ul>
+            </div>  
+        </nav>
+
+   <br>
+
+   {% block content %}
+   
+        <!-- content -->
+   
+   {% endblock %}
+
+</body>
+
+</html>

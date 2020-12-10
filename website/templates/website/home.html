@@ -1,0 +1,31 @@
+{% extends "website/base.html" %}
+{% block title %}BOOKPHONE - LOGIN{% endblock %}
+
+{% load static %}
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 rounded" style="background-color:#F5F5F5; border:solid 1px #EEEEEE; margin: 0 auto;">
+            <form action="script/login.php" class="was-validated" method="POST"><br>  
+                <h4><img src="{% static 'website/img/icon.png' %}" style="width: 40px; height: 40px;" title="Online Agenda"/> Login Bookphone</h4>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input"> Remember-me </label>
+                </div>
+                <p class="small">Do you have an account? <a href="#">Register</a></p>
+                <button type="submit" class="btn btn-dark"> LOGIN </button><br><br>
+            </form>
+    </div>
+</div>
+{% endblock %}
